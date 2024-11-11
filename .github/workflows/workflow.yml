@@ -58,7 +58,7 @@ jobs:
           target: $JAR_HOME
       - name: Deploy the application
         if: ${{ github.ref == 'refs/heads/main2' }}
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.1.0
         env:
           NACOS_ADDR: ${{ secrets.NACOS_ADDR }}
           NACOS_NAMESPACE: ${{ secrets.NACOS_NAMESPACE }}
